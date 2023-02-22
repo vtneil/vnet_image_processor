@@ -10,8 +10,6 @@
 #define COLOR     vnet::COLOR_RGB
 
 namespace vnet {
-    constexpr uint8_t MAX_BIT_DEPTH = 8;
-
     enum ColorMode {
         COLOR_GRAYSCALE = 0,
         COLOR_RGB,
@@ -118,6 +116,10 @@ namespace vnet {
 
         size_t height() const {
             return _img_height;
+        }
+
+        uint8_t depth() const {
+            return bit_depth;
         }
 
         size_t area() const {
